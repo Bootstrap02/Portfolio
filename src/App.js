@@ -133,7 +133,7 @@ function Hero({ lang, t }) {
             </button>
           </div>
           <div className="animate-fade-up delay-5 flex gap-2 flex-wrap">
-            {['React.js','Redux', 'DevOps', 'AWS', 'DOCKER', 'Node.js','MongoDB','React Native','Figma','Express.js'].map(p => (
+            {['React.js','Redux', 'DevOps', 'AWS','JavaScript', 'TypeScript', 'DOCKER', 'Node.js','MongoDB','React Native','Figma','Express.js'].map(p => (
               <span key={p} className="font-mono text-[0.63rem] tracking-wide text-muted2 border border-white/10 px-3 py-1 rounded-full bg-white/[0.03] hover:border-blue/40 hover:text-blue transition-all">
                 {p}
               </span>
