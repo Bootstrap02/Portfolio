@@ -1,13 +1,84 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: #08090d;
+    color: #eef2f7;
+    font-family: 'Outfit', sans-serif;
+    overflow-x: hidden;
+  }
+  ::selection { background: #63b3ed; color: #08090d; }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #08090d; }
+  ::-webkit-scrollbar-thumb { background: #4299e1; border-radius: 2px; }
+  a { color: inherit; text-decoration: none; }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer utilities {
+  .noise::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+    opacity: 0.022;
+  }
+  .text-gradient-blue {
+    background: linear-gradient(135deg, #63b3ed 0%, #b794f4 55%, #f6ad55 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradShift 5s ease infinite;
+  }
+  .text-gradient-nav {
+    background: linear-gradient(135deg, #eef2f7, #63b3ed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .ring-blob::before {
+    content: '';
+    position: absolute;
+    inset: -18px;
+    border-radius: 58% 42% 62% 38% / 48% 55% 45% 52%;
+    border: 1.5px dashed rgba(99,179,237,0.32);
+    animation: spin 20s linear infinite;
+  }
+  .ring-blob::after {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 54% 46% 60% 40% / 50% 56% 44% 50%;
+    border: 1px solid rgba(99,179,237,0.16);
+    box-shadow: 0 0 44px rgba(99,179,237,0.1), inset 0 0 44px rgba(99,179,237,0.04);
+    animation: spinR 26s linear infinite;
+  }
+  .blob-shape {
+    border-radius: 55% 45% 60% 40% / 50% 55% 45% 50%;
+  }
+  .section-tag::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 1px;
+    background: #63b3ed;
+  }
+  .animate-fade-up { opacity: 0; animation: fadeUp .7s ease forwards; }
+  .delay-0  { animation-delay: .05s; }
+  .delay-1  { animation-delay: .14s; }
+  .delay-2  { animation-delay: .25s; }
+  .delay-3  { animation-delay: .36s; }
+  .delay-4  { animation-delay: .48s; }
+  .delay-5  { animation-delay: .60s; }
 }
+
+@keyframes fadeUp    { from { opacity:0; transform:translateY(32px) } to { opacity:1; transform:none } }
+@keyframes gradShift { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }
+@keyframes spin      { to { transform: rotate(360deg); } }
+@keyframes spinR     { to { transform: rotate(-360deg); } }
+@keyframes slideIn   { from{opacity:0;transform:translateX(-18px)} to{opacity:1;transform:none} }
+@keyframes float     { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-11px)} }
+@keyframes blink     { 0%,100%{opacity:1} 50%{opacity:0} }
+@keyframes btnSpin   { to{transform:rotate(360deg)} }
