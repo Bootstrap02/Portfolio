@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import portrait from './assets/potrait.png';
+import portrait from './assets/potrait.jpg';
 import { SKILLS, EXP, PROJECTS, EDU, T } from './data';
 
 /* ── tiny hook: IntersectionObserver reveal ─────────────────── */
@@ -144,7 +144,7 @@ function Hero({ lang, t }) {
         <div className="flex items-center justify-center animate-fade-up delay-2 order-first lg:order-last">
           <div className="relative w-[360px] h-[360px] ring-blob flex-shrink-0">
             <div className="w-full h-full blob-shape overflow-hidden relative z-10 shadow-[0_24px_60px_rgba(0,0,0,.65),0_0_0_1px_rgba(99,179,237,.14)] bg-gradient-to-br from-bg3 to-bg2">
-              <img src={portrait} alt="Louis Joseph" className="w-full h-full object-cover object-top" onError={e => e.target.style.display='none'}/>
+              <img src={portrait} alt="Louis Joseph" className="rounded-full w-full h-full object-cover object-top" onError={e => e.target.style.display='none'}/>
               <div className="absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-t from-[rgba(8,9,13,.55)] to-transparent pointer-events-none"/>
             </div>
             {/* accent dots */}
@@ -426,7 +426,7 @@ function HireMe({ lang, t }) {
           <div className="flex justify-center gap-3 flex-wrap mt-4">
             {[
               { icon:'✉', label:'louisjoseph131@gmail.com', href:'mailto:louisjoseph131@gmail.com' },
-              { icon:'💼', label:'LinkedIn', href:'https://linkedin.com/in/louisjoseph-634558153' },
+              { icon:'💼', label:'LinkedIn', href:'https://www.linkedin.com/in/louis-udegbue-634558153/' },
               { icon:'🐙', label:'GitHub', href:'https://github.com/Bootstrap02' },
             ].map(l => (
               <a key={l.label} href={l.href} target="_blank" rel="noreferrer"
@@ -482,7 +482,7 @@ function Contact({ lang, t }) {
             { ico:'📞', lbl:t.ct_ph, val:'+234 704 238 0116', href:'tel:+2347042380116' },
             { ico:'✉️', lbl:t.ct_em, val:'louisjoseph131@gmail.com', href:'mailto:louisjoseph131@gmail.com' },
             { ico:'🐙', lbl:'GitHub', val:'github.com/Bootstrap02', href:'https://github.com/Bootstrap02' },
-            { ico:'💼', lbl:'LinkedIn', val:'louisjoseph-634558153', href:'https://linkedin.com/in/louisjoseph-634558153' },
+            { ico:'💼', lbl:'LinkedIn', val:'louisjoseph-634558153', href:'https://www.linkedin.com/in/louis-udegbue-634558153/' },
           ].map(item => (
             <a key={item.lbl} href={item.href} target="_blank" rel="noreferrer"
               className="flex items-center gap-3.5 px-5 py-4 bg-card border border-white/10 rounded-xl hover:border-blue/40 hover:translate-x-1.5 hover:bg-white/[0.03] transition-all">
