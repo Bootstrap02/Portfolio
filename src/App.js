@@ -114,7 +114,7 @@ function Hero({ lang, t }) {
           </p>
           <h1 className="animate-fade-up delay-1 font-syne font-black leading-[0.95] tracking-tight mb-4" style={{fontSize:'clamp(2.6rem,5vw,4.6rem)'}}>
             <span className="block text-snow">Louis</span>
-            <span className="block text-gradient-blue">Joseph.</span>
+            <span className="block text-gradient-blue">Udegbue.</span>
           </h1>
           <p className="animate-fade-up delay-2 font-outfit font-light text-muted2 mb-6" style={{fontSize:'clamp(.92rem,1.7vw,1.15rem)'}}>
             Full-Stack <span className="text-snow font-medium">Software Developer</span> — Web & Mobile
