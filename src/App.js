@@ -56,7 +56,7 @@ function Navbar({ lang, t, scrolled, menuOpen, setMenuOpen }) {
         ${scrolled ? 'bg-[rgba(8,9,13,0.92)] backdrop-blur-xl border-b border-white/5 py-3.5 px-14' : 'py-5 px-14'}`}>
         <div onClick={() => goTo('hero')}
           className="font-syne font-black text-2xl tracking-tight cursor-pointer ml-20 text-gradient-nav select-none">
-          LJ<span className="text-blue">.</span>
+          LU<span className="text-blue">.</span>
         </div>
         <ul className="hidden md:flex items-center gap-8 list-none">
           {links.map((k,i) => (
@@ -133,7 +133,7 @@ function Hero({ lang, t }) {
             </button>
           </div>
           <div className="animate-fade-up delay-5 flex gap-2 flex-wrap">
-            {['React.js','Node.js','MongoDB','React Native','Figma','Express.js'].map(p => (
+            {['React.js','Redux', 'DevOps', 'AWS', 'DOCKER', 'Node.js','MongoDB','React Native','Figma','Express.js'].map(p => (
               <span key={p} className="font-mono text-[0.63rem] tracking-wide text-muted2 border border-white/10 px-3 py-1 rounded-full bg-white/[0.03] hover:border-blue/40 hover:text-blue transition-all">
                 {p}
               </span>
