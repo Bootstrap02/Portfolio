@@ -426,7 +426,7 @@ function HireMe({ lang, t }) {
           <div className="flex justify-center gap-3 flex-wrap mt-4">
             {[
               { icon:'✉', label:'louisjoseph131@gmail.com', href:'mailto:louisjoseph131@gmail.com' },
-              { icon:'💼', label:'LinkedIn', href:'https://www.linkedin.com/in/louis-udegbue-634558153/' },
+              { icon:'💼', label:'LinkedIn', href:'https://www.linkedin.com/in/louis-ogochukwu-udegbue-634558153?utm_source=share_via&utm_content=profile&utm_medium=member_android' },
               { icon:'🐙', label:'GitHub', href:'https://github.com/Bootstrap02' },
             ].map(l => (
               <a key={l.label} href={l.href} target="_blank" rel="noreferrer"
@@ -482,7 +482,7 @@ function Contact({ lang, t }) {
             { ico:'📞', lbl:t.ct_ph, val:'+234 704 238 0116', href:'tel:+2347042380116' },
             { ico:'✉️', lbl:t.ct_em, val:'louisjoseph131@gmail.com', href:'mailto:louisjoseph131@gmail.com' },
             { ico:'🐙', lbl:'GitHub', val:'github.com/Bootstrap02', href:'https://github.com/Bootstrap02' },
-            { ico:'💼', lbl:'LinkedIn', val:'louisjoseph-634558153', href:'https://www.linkedin.com/in/louis-udegbue-634558153/' },
+            { ico:'💼', lbl:'LinkedIn', val:'louisjoseph-634558153', href:'https://www.linkedin.com/in/louis-ogochukwu-udegbue-634558153?utm_source=share_via&utm_content=profile&utm_medium=member_android'}, 
           ].map(item => (
             <a key={item.lbl} href={item.href} target="_blank" rel="noreferrer"
               className="flex items-center gap-3.5 px-5 py-4 bg-card border border-white/10 rounded-xl hover:border-blue/40 hover:translate-x-1.5 hover:bg-white/[0.03] transition-all">
